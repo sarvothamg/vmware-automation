@@ -1,0 +1,14 @@
+---
+- name: Power On VMware Virtual Machine
+  hosts: vcenter
+  gather_facts: false
+
+  tasks:
+    - name: Power On VM
+      community.vmware.vmware_guest_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+        name: "{{ vm_name }}"
+        state: powered-on
