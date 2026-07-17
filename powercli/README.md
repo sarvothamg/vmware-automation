@@ -11,3 +11,9 @@ VMware vSphere automation scripts using PowerCLI.
 - Create Snapshots
 - Remove Snapshots
 - Clone Virtual Machines
+
+## Technology
+
+- VMware PowerCLI
+- PowerShell
+- vSphere Automation
