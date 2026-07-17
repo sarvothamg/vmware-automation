@@ -1,0 +1,17 @@
+---
+- name: Create VMware Snapshot
+  hosts: vcenter
+  gather_facts: false
+
+  tasks:
+    - name: Create VM Snapshot
+      community.vmware.vmware_guest_snapshot:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+        datacenter: "{{ datacenter_name }}"
+        name: "{{ vm_name }}"
+        state: present
+        snapshot_name: "{{ snapshot_name }}"
+        description: "Created by Ansible automation"
