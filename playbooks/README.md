@@ -1,3 +1,14 @@
-# Playbooks
+# VMware Playbooks
 
-This folder contains VMware automation playbooks.
+Automation playbooks for VMware vSphere administration.
+
+## Included
+
+- Collect VM Information
+- Power On Virtual Machines
+- Power Off Virtual Machines
+- Create Snapshots
+- Delete Snapshots
+- Clone Virtual Machines
+- Datastore Information
+- Cluster Information
