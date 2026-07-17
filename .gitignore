@@ -1,0 +1,15 @@
+# Ansible
+*.retry
+
+# PowerShell
+*.log
+
+# Credentials
+*.secret
+*.password
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
