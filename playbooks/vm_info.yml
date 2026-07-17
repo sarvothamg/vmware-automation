@@ -1,0 +1,18 @@
+---
+- name: Collect VMware Virtual Machine Information
+  hosts: vcenter
+  gather_facts: false
+
+  tasks:
+
+    - name: Gather VM Information
+      community.vmware.vmware_vm_info:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+      register: vm_info
+
+    - name: Display Virtual Machines
+      debug:
+        var: vm_info.virtual_machines
