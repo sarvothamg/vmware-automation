@@ -1,0 +1,9 @@
+---
+vcenter_hostname: vcsa.example.com
+vcenter_username: administrator@vsphere.local
+vcenter_password: VMware123!
+
+validate_certs: false
+
+datacenter_name: Datacenter
+cluster_name: Cluster01
