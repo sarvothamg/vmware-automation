@@ -1,0 +1,18 @@
+---
+- name: Collect VMware Datastore Information
+  hosts: vcenter
+  gather_facts: false
+
+  tasks:
+
+    - name: Gather Datastore Information
+      community.vmware.vmware_datastore_info:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+      register: datastore_info
+
+    - name: Display Datastores
+      debug:
+        var: datastore_info.datastores
