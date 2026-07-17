@@ -1,32 +1,50 @@
 # VMware Automation
 
-Enterprise-style VMware vSphere automation using Ansible and PowerCLI.
+VMware infrastructure automation examples using Ansible and PowerCLI.
 
-## Overview
+This repository demonstrates common VMware vSphere automation tasks performed by Infrastructure Engineers.
 
-This repository demonstrates automation examples for VMware infrastructure administration.
+## Technologies
 
-The project covers common VMware operational tasks using:
-
+- VMware vSphere
 - Ansible
 - PowerCLI
-- VMware vSphere APIs
+- PowerShell
+- YAML
 
-## Features
+---
 
-### Ansible Automation
+## Ansible Automation
 
-- Collect VMware Virtual Machine Information
+Location:
+
+```
+playbooks/
+```
+
+Includes:
+
+- Collect Virtual Machine Information
 - Power On Virtual Machines
 - Power Off Virtual Machines
-- Create VM Snapshots
-- Delete VM Snapshots
+- Create Snapshots
+- Delete Snapshots
 - Clone Virtual Machines
-- Collect Datastore Information
-- Collect Cluster Information
+- Datastore Information
+- Cluster Information
 - Create VMware Folders
 
-### PowerCLI Automation
+---
+
+## PowerCLI Automation
+
+Location:
+
+```
+powercli/
+```
+
+Includes:
 
 - Connect to vCenter
 - Get VM Inventory
@@ -36,4 +54,24 @@ The project covers common VMware operational tasks using:
 - Remove Snapshots
 - Clone Virtual Machines
 
+---
+
 ## Repository Structure
+
+```
+vmware-automation/
+
+├── inventory/
+├── group_vars/
+├── playbooks/
+├── roles/
+└── powercli/
+```
+
+---
+
+## Author
+
+Sarvotham Golla
+
+VMware | Automation | Cloud Infrastructure Engineer
