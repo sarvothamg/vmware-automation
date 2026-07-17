@@ -1,0 +1,16 @@
+---
+- name: Clone VMware Virtual Machine
+  hosts: vcenter
+  gather_facts: false
+
+  tasks:
+    - name: Clone VM
+      community.vmware.vmware_guest:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ validate_certs }}"
+        datacenter: "{{ datacenter_name }}"
+        name: "{{ new_vm_name }}"
+        template: "{{ template_name }}"
+        state: poweredon
